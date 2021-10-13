@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/1-useState/inizio/3-useState-array"; 
+import Inizio from "./lezioni/1-useState/inizio/4-useState.object"; 
 
 function App() {
   return (
