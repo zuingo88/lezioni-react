@@ -10,7 +10,11 @@ const useEffectBasi = () => {
 
   useEffect(() => {
     console.log(`Ciao! sono useEffect.`);
-    document.title = `${value} Nuovi Messaggi`
+    if (value < 1) {
+      document.title = `Nessun messaggio`;
+    } else {
+      document.title = `${value} Nuovi messaggi`;
+    }
   });
 
   return (
