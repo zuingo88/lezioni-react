@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/1-useState/inizio/5-useState-contatore"; 
+import Inizio from "./lezioni/2-useEffect/inizio/1-useEffect-basi"; 
 
 function App() {
   return (
