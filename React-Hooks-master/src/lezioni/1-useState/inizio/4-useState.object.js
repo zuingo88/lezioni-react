@@ -9,12 +9,6 @@ const StateObject = () => {
   });
 
   const cambiaStato = () => {
-    // if ((persona.age === 33) & (persona.saluto === 'saluto sempre ciao!')) {
-    //   persona.age = 34;
-    //   persona.saluto = 'non saluto più ciao!';
-    // } else {
-
-    // }
     setPersona({
       ...persona, //  Richiamo tutto il precendente state altrimenti mi rimangono solo le coppie chiave-valore che modifico. In questo caso perderei name.
       age: 34,
