@@ -7,13 +7,23 @@ const CounterComponent = () => {
     setContatore(0);
   };
 
+  const diminuisci = () => {
+    setContatore(contatore - 1);
+  }
+
   const aumenta = () => {
-    setContatore((oldValue) => {
-      if (oldValue + 1 === 6) {
-        return oldValue
-      }
-      return oldValue + 1
-    })
+    // setContatore((oldValue) => {
+    //   if (oldValue + 1 === 6) {
+    //     return oldValue
+    //   }
+    //   return oldValue + 1
+    // });
+
+    setTimeout(() => {
+      setContatore((oldValue => {
+        return oldValue + 1;
+      }))
+    }, 2000);
   };
 
   return (
@@ -24,7 +34,7 @@ const CounterComponent = () => {
       <div className="d-flex justify-content-between">
         <button
           className="button my-2"
-          onClick={() => setContatore(contatore - 1)}
+          onClick={diminuisci}
         >
           -
         </button>
