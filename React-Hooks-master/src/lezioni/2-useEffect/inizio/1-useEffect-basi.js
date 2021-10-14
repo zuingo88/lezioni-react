@@ -15,7 +15,7 @@ const useEffectBasi = () => {
     } else {
       document.title = `${value} Nuovi messaggi`;
     }
-  });
+  }, [value]); // Lo useEffect sarà eseguito ogni qual volta ci sarà una variazione dell'elemento scritto dentro l'array. In caso di array vuoto lo useEffect sarà eseguito solo al primo caricamento della pagina.
 
   return (
     <div>
