@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/2-useEffect/inizio/1-useEffect-basi"; 
+import Inizio from "./lezioni/2-useEffect/inizio/2-useEffect-cleanup"; 
 
 function App() {
   return (
