@@ -1,34 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ControlledInput = () => {
 
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [tel, setTel] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form inviato!');
+
+    if (name && email && tel) {
+      console.log('Form inviato!', 'Nome:', name, 'Email:', email, 'Telefono:', tel);
+      setName('');
+      setEmail('');
+      setTel('');      
+    } else {
+      alert('Riempi i campi richiesti!');
+    }
   }
 
   return (
     <form className='bg-white shadow p-4 rounded'>
 
       <div className="form-group d-flex align-items-center justify-content-around container">
-        <label htmlFor="nome" className="text-left font-weight-bold col-3">
+        <label htmlFor="na
+        me" className="text-left font-weight-bold col-3">
           Nome:
         </label>
-        <input id='nome' type="text" name='nome' className='form-control col-9' />
+        <input
+          id='name'
+          type="text"
+          name='name'
+          className='form-control col-9'
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
       </div>
 
       <div className="form-group d-flex align-items-center justify-content-around container rounded">
         <label htmlFor="email" className="text-left font-weight-bold col-3">
           Email:
         </label>
-        <input id='email' type="email" name='email' className='form-control col-9' />
+        <input
+          id='email'
+          type="email"
+          name='email'
+          className='form-control col-9'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
       </div>
 
       <div className="form-group d-flex align-items-center justify-content-around container rounded">
-        <label htmlFor="telefono" className="text-left font-weight-bold col-3">
+        <label htmlFor="tel" className="text-left font-weight-bold col-3">
           Telefono:
         </label>
-        <input id='telefono' type="tel" name='telefono' className='form-control col-9' />
+        <input
+          id='tel'
+          type="tel"
+          name='tel'
+          className='form-control col-9'
+          value={tel}
+          onChange={(e) => setTel(e.target.value)}
+        />
       </div>
 
       <div>
