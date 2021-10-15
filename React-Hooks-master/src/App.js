@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/3-render-condizionale/inizio/2-render-short-circuit"; 
+import Inizio from "./lezioni/3-render-condizionale/inizio/3-show-hide"; 
 
 function App() {
   return (
