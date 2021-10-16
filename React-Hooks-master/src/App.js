@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/5-useRef/inizio/useref-example"; 
+import Inizio from "./lezioni/6-useReducer/inizio";  // Se la cartella inizio ci dovesse contenere un file index, sarà aperto di defalut senza che debba necesssariamente specificarlo. 
 
 function App() {
   return (
