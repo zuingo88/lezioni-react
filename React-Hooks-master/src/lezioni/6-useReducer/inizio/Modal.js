@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Modal = ({ modalContent, modalState, openModal }) => {
+const Modal = ({ modalContent, modalState, chiudiModal }) => {
   return (
     <section className={`modal-section ${modalState ? 'show-modal' : ''}`}>
       <div className='container modal-content'>
         <h4>
           {modalContent || 'Sono un bel modal!'}
         </h4>
-        <button className="button delete-button" onClick={openModal}>X</button>
+        <button className="button delete-button" onClick={chiudiModal}>X</button>
       </div>
     </section>
   )

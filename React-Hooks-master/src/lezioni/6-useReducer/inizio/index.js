@@ -1,24 +1,40 @@
 import React, { useReducer, useState } from "react";
 import Modal from './Modal';
+import reducer from './reducer';
+
+const initialState = {
+  isModalOpen: false,
+  modalContent: 'Ciao, sono Modal...'
+};
 
 const Index = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState(`ciao, sono Modal...`);
 
-  const openModal = () => {
-    setIsModalOpen(!isModalOpen);
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const tiPremo = () => {
+    dispatch({
+      type: 'PREMO_BOTTONE'
+    });
   }
+
+  const apriModal = () => {
+    dispatch({ type: 'APRI_MODAL' })
+  };
+
+  const chiudiModal = () => {
+    dispatch({ type: 'CHIUDI_MODAL' })
+  };
 
   return (
     <>
       <div>
         <h2>Premi qui per aprire il modal!</h2>
-        <button className='button' onClick={openModal}>Mostrami</button>
+        <button className='button' onClick={apriModal}>Mostrami</button>
       </div>
       <Modal
-        modalContent={modalContent}
-        modalState={isModalOpen}
-        openModal={openModal}
+        modalContent={state.modalContent}
+        modalState={state.isModalOpen}
+        chiudiModal={chiudiModal}
       />
     </>
   );
