@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/4-forms/inizio/1-input-controllati"; 
+import Inizio from "./lezioni/4-forms/inizio/2-input-object-state"; 
 
 function App() {
   return (

@@ -17,7 +17,7 @@ const ControlledInput = () => {
         [
           ...users,
           {
-            id: new Date(Date.now()).getTime().toString(),  //  Trickc per generare un numero univoco. L'ideale è usare libreerie come uuid.
+            id: new Date(Date.now()).getTime().toString(),  //  Trickc per generare un numero univoco. L'ideale è usare librerie come uuid.
             name, //  Equivalente di scrivere `nome: nome,`. In ES6 si può fare quando la chiave è uguale al valore che gli viene assegnato.
             email,
             tel,
