@@ -1,6 +1,10 @@
 import React, { useReducer, useState } from "react";
 import Modal from './Modal';
 import reducer from './reducer';
+import {
+  APRI_MODAL,
+  CHIUDI_MODAL
+} from './actions';
 
 const initialState = {
   isModalOpen: false,
@@ -18,11 +22,11 @@ const Index = () => {
   }
 
   const apriModal = () => {
-    dispatch({ type: 'APRI_MODAL' })
+    dispatch({ type: APRI_MODAL, payload: 'il mio nuovo modal' })
   };
 
   const chiudiModal = () => {
-    dispatch({ type: 'CHIUDI_MODAL' })
+    dispatch({ type: CHIUDI_MODAL })
   };
 
   return (

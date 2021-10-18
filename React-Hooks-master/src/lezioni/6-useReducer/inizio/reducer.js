@@ -1,15 +1,21 @@
+import {
+  APRI_MODAL,
+  CHIUDI_MODAL
+} from './actions';
+
 const reducer = (state, action) => {
   console.log('state:', state, 'action:', action);
   if (action.type === 'PREMO_BOTTONE') {
     console.log('Bottone premuto!');
   }
-  if (action.type === 'APRI_MODAL') {
+  if (action.type === APRI_MODAL) {
     return {
       ...state,
-      isModalOpen: true
+      isModalOpen: true,
+      modalContent: action.payload
     }
   }
-  if (action.type === 'CHIUDI_MODAL') {
+  if (action.type === CHIUDI_MODAL) {
     return {
       ...state,
       isModalOpen: false
