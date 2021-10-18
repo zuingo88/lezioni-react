@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useFetch from './useFetch';
 
 const url = "https://jsonplaceholder.typicode.com/users";
