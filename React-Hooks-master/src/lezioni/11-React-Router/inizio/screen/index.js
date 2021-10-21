@@ -25,7 +25,7 @@ const index = () => {
         <Route path='/' exact component={Home} />
         <Route path='/about' component={About} />
         <Route path='/progetti' component={Progetti} />
-        {<Route path='/progetto/:id' component={SingleProgetto} /> /* Dopo i due puntio posso aggiungere un parametro (id) */}
+        <Route path='/progetto/:id' component={SingleProgetto} /> {/* Dopo i due puntio posso aggiungere un params (id) */}
         <Route path='*' component={ErrorPage} />
       </Switch>
     </Router>
