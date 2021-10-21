@@ -14,7 +14,7 @@ const FetchComponent = () => {
   }
 
   useEffect(() => {                           //  Richiamo la funzione get useEffect
-    getData();                                //  Richiamo la funzione getata in useEffect perchè esso non può avere come parametro un async.
+    getData();                                //  Richiamo la funzione get data in useEffect perchè esso non può avere come parametro un async.
   }, []);                                     //  Do un secondo parametro a useEffect per far sì che la chiamata Axios avvenga una sola vola al caricamento della pagina.
 
   return (

@@ -1,6 +1,8 @@
 import React from "react";
-import About from "./About";
 import Home from "./Home";
+import About from "./About";
+import Progetti from "./Progetti";
+import SingleProgetto from "./SingleProgetto";
 import ErrorPage from './ErrorPage';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
@@ -21,7 +23,9 @@ const index = () => {
       </ul>
       <Switch>
         <Route path='/' exact component={Home} />
-        <Route path='/About' component={About} />
+        <Route path='/about' component={About} />
+        <Route path='/progetti' component={Progetti} />
+        {<Route path='/progetto/:id' component={SingleProgetto} /> /* Dopo i due puntio posso aggiungere un parametro (id) */}
         <Route path='*' component={ErrorPage} />
       </Switch>
     </Router>
