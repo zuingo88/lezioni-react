@@ -2,9 +2,21 @@ import React, { useMemo, useState } from "react";
 import useFetch from "../../9-custom-hooks/risultato/useFetch";
 const url = "https://api.github.com/users";
 
+const trovaMaggiore = (array) => {
+  console.log('trovo il maggiore');
+  return array.reduce((total, item) => {
+    if (item.id > total) {
+      total = item.id;
+    }
+    return total;
+  }, 0);
+};
+
 const Index = () => {
   const { data } = useFetch(url);
   const [contatore, setContatore] = useState(0);
+
+  useMemo(() => trovaMaggiore(data), [data]); //  Memorizzio il valore di data e, finchèm esso non varia, ritoro lo stesso valore senza ricaricare.
 
   return (
     <>
@@ -26,7 +38,7 @@ const Index = () => {
   );
 };
 
-const Elenco = ({ avatar_url: image, login: name }) => {
+const Elenco = React.memo(({ avatar_url: image, login: name }) => { //  Con React.memo(), se non avvengono cambiamentinel componente, non  ci sarà un nuovo render ma verranno ritornati valori precedenti.
   return (
     <article className="card bg-white my-3 shadow-sm">
       <img
@@ -38,6 +50,6 @@ const Elenco = ({ avatar_url: image, login: name }) => {
       <h4>{name}</h4>
     </article>
   );
-};
+});
 
 export default Index;
