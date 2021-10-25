@@ -1,4 +1,4 @@
-import Inizio from "./lezioni/12-memo-useMemo/inizio";  // Se la cartella inizio ci dovesse contenere un file index, sarà aperto di defalut senza che debba necesssariamente specificarlo. 
+import Inizio from "./lezioni/13-useCallBack/inizio";  // Se la cartella inizio ci dovesse contenere un file index, sarà aperto di defalut senza che debba necesssariamente specificarlo. 
 
 function App() {
   return (
